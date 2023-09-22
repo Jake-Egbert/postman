@@ -1,0 +1,3955 @@
+{
+	"info": {
+		"_postman_id": "403e2163-1a02-414b-90fe-d81aafc43328",
+		"name": "taskwize",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25276930"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Users Get All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Get By ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/user/14fad661-e527-45f4-b277-b26613535950",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"user",
+								"14fad661-e527-45f4-b277-b26613535950"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Users Get Me",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/user/me",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"user",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Users Get By Org ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/users/organization/bd784505-cb8e-4232-9efe-b393cb36d3f2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"users",
+								"organization",
+								"bd784505-cb8e-4232-9efe-b393cb36d3f2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Users Search",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/user/search?q=su",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"user",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "su"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Add Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Sarah\",\n    \"last_name\": \"Roy\",\n    \"email\": \"sarah+1@devpipeline.com\",\n    \"password\": \"roy1997!\",\n    \"phone\" : \"3852014194\",\n    \"active\": true,\n    \"org_id\": \"b9062459-6d56-415b-ab6d-df12b4662ab1\",\n    \"color\": \"orange\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"poopy\",\n    \"last_name\": \"butthead\",\n    \"email\": \"tim@devpipeline.com\",\n    \"password\": \"Password@1\",\n    \"phone\" : \"3852014194\",\n    \"active\": true,\n    \"org_id\": \"bd784505-cb8e-4232-9efe-b393cb36d3f2\",\n    \"color\": \"red\",\n    \"role\": \"user\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/new_account_create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"new_account_create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"role\": \"super-admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/user/fee8b1a9-16f2-47c6-8b9f-e3002625272f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"user",
+								"fee8b1a9-16f2-47c6-8b9f-e3002625272f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Activate/Deactivate",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/user/status/2c046281-122f-4979-a76e-8eb5c5b5c37c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"user",
+								"status",
+								"2c046281-122f-4979-a76e-8eb5c5b5c37c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/user/delete/2c046281-122f-4979-a76e-8eb5c5b5c37c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"user",
+								"delete",
+								"2c046281-122f-4979-a76e-8eb5c5b5c37c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Organizations",
+			"item": [
+				{
+					"name": "Organizations Get All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/organizations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"organizations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Organization By ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/organization/5e9f157c-2444-4ab1-b01b-13c601bac2f5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"organization",
+								"5e9f157c-2444-4ab1-b01b-13c601bac2f5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Organization Search",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/organization/search?q=dev",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"organization",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "dev"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Organization Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"name\" : \"Silver Spindle2\",\n    \"city\" : \"Provo\",\n    \"state\" : \"UT\",\n    \"postal\" : \"84604\",\n    \"color\": \"#9c27b0\",\n    \"phone\" : \"000-000-0000\",\n    \"email\": \"sarah+2@devpipeline.com\",\n    \"active\" : true,\n    \"created_by\": \"d0c6d481-ce15-448c-b998-9667ca69122d\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/organization",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"organization"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Organization Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"name\" : \"Jason's Cool\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/organization/5e9f157c-2444-4ab1-b01b-13c601bac2f5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"organization",
+								"5e9f157c-2444-4ab1-b01b-13c601bac2f5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Organization Activate/Deactivate",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/organization/status/5e9f157c-2444-4ab1-b01b-13c601bac2f5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"organization",
+								"status",
+								"5e9f157c-2444-4ab1-b01b-13c601bac2f5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "organization delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/organization/delete/118db7c8-05e1-4574-a07f-7ba5ec1c73a6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"organization",
+								"delete",
+								"118db7c8-05e1-4574-a07f-7ba5ec1c73a6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Projects",
+			"item": [
+				{
+					"name": "Projects Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/projects",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Project Get by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/project/2fd35e22-1553-4f7b-8ead-71ec5d11fe35",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"project",
+								"2fd35e22-1553-4f7b-8ead-71ec5d11fe35"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Project Get by Org ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/projects/organization",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"projects",
+								"organization"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Project Get by Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/project/search?q=cer",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"project",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "cer"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Project Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"taskwize\",\n    \"color\": \"#9c27b0\",\n    \"description\": \"This is a task management system\",\n    \"created_by_id\": \"eb658206-ea88-4162-ae81-27aaaf2b5798\",\n    \"project_manager_id\": \"eb658206-ea88-4162-ae81-27aaaf2b5798\",\n    \"product_owner_id\": \"eb658206-ea88-4162-ae81-27aaaf2b5798\",\n    \"project_billing_contact_id\": \"eb658206-ea88-4162-ae81-27aaaf2b5798\",\n    \"project_status_id\" : \"46db0cf1-661b-496c-a4ba-90b16ccf307e\",\n    \"project_stage_id\" : \"1ebb8487-d720-4e27-9362-81e27ef2f1fd\",\n    \"client_id\": \"f6e3af92-7b24-451c-b479-fea1d5c5132a\",\n    \"org_id\": \"f6e3af92-7b24-451c-b479-fea1d5c5132a\",\n    \"active\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8089/project",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"project"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Project Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"color\": \"#aaf0d1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8089/project/b60a997b-6879-467f-babf-7fdd01869941",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"project",
+								"b60a997b-6879-467f-babf-7fdd01869941"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Project Activate/Deactivate",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/project/status/b60a997b-6879-467f-babf-7fdd01869941",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"project",
+								"status",
+								"b60a997b-6879-467f-babf-7fdd01869941"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Project Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/project/delete/b60a997b-6879-467f-babf-7fdd01869941",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"project",
+								"delete",
+								"b60a997b-6879-467f-babf-7fdd01869941"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Project Stage",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comments",
+			"item": [
+				{
+					"name": "Comment Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"project_id\": \"071680fd-4d5b-485f-8b4a-06d89834a808\",\n    \"org_id\": \"02234182-176b-46fc-9869-b3799be25c5e\",\n    \"user_id\": \"05614d63-79de-4d2c-8ca0-7084a3ae1e32\",\n    \"comment_text\": \"Comment\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8089/comment",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"comment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Comment Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/comments",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Comment Get by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/comment/9cca6aeb-afb3-4e1c-8453-bc892c091cdc",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"comment",
+								"9cca6aeb-afb3-4e1c-8453-bc892c091cdc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Comment Get by Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/comment/search?q=dev",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"comment",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "dev"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Comment Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"comment_text\": \"DevPipeline is the best\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8089/comment/9cca6aeb-afb3-4e1c-8453-bc892c091cdc",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"comment",
+								"9cca6aeb-afb3-4e1c-8453-bc892c091cdc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Comment Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/comment/delete/9cca6aeb-afb3-4e1c-8453-bc892c091cdc",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"comment",
+								"delete",
+								"9cca6aeb-afb3-4e1c-8453-bc892c091cdc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Invoices",
+			"item": [
+				{
+					"name": "Invoices Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"org_id\": \"592f1d6f-cd2c-4589-9dda-1bdb1c885fca\",\n    \"client_id\": \"592f1d6f-cd2c-4589-9dda-1bdb1c885fca\",\n    \"invoice_number\": \"1\",\n    \"invoice_status\": \"Pending\",\n    \"description\": \"BHI Invoice 7/3/2023\",\n    \"amount_billed\": 700.58,\n    \"amount_paid\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8089/invoice",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"invoice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invoices Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/invoices",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"invoices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invoices Get by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/invoice/af8d6776-1d3c-46f4-97be-b3dc9d09eae1",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"invoice",
+								"af8d6776-1d3c-46f4-97be-b3dc9d09eae1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invoices Get by Org ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/invoices/organization",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"invoices",
+								"organization"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invoices Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amount_paid\": 500\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8089/invoice/af8d6776-1d3c-46f4-97be-b3dc9d09eae1",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"invoice",
+								"af8d6776-1d3c-46f4-97be-b3dc9d09eae1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invoices Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/invoice/delete/af8d6776-1d3c-46f4-97be-b3dc9d09eae1",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"invoice",
+								"delete",
+								"af8d6776-1d3c-46f4-97be-b3dc9d09eae1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Time Entry",
+			"item": [
+				{
+					"name": "Time Entry Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"org_id\": \"619d62f4-0330-4339-88e4-2ef1e001e163\",\n    \"user_id\": \"c2d7a28f-4e7e-45cd-ab91-b5f8dabdfc35\",\n    \"entered_by\": \"c2d7a28f-4e7e-45cd-ab91-b5f8dabdfc35\",\n    \"start_datetime\": \"2023-07-03T11:30:21.000Z\",\n    \"date_entered\":\"2023-07-26T12:04:21.000Z\",\n    \"task_id\": \"90abaf1e-5260-4725-a3a6-c8792bac87b3\",\n    \"invoice_id\":\"ac6c4de6-85d0-4c07-afc0-b89ae6cda728\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8089/time_entry",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"time_entry"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Time Entry Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/time_entries",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"time_entries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Time Entry Get by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/time_entry/712d535c-0fbb-421a-8547-34573ded0990",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"time_entry",
+								"712d535c-0fbb-421a-8547-34573ded0990"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Time Entry Get by Task ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/time_entries/90abaf1e-5260-4725-a3a6-c8792bac87b3",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"time_entries",
+								"90abaf1e-5260-4725-a3a6-c8792bac87b3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Time Entry Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"start_datetime\": \"2023-07-03T11:30:21.000Z\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8089/time_entry/aab9dcc0-4efc-4faa-bb83-f85f3d4d3492",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"time_entry",
+								"aab9dcc0-4efc-4faa-bb83-f85f3d4d3492"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Time Entry Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/time_entry/delete/712d535c-0fbb-421a-8547-34573ded0990",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"time_entry",
+								"delete",
+								"712d535c-0fbb-421a-8547-34573ded0990"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Audit Logs",
+			"item": [
+				{
+					"name": "Audit Logs Search",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/audit-logs/<id_or_search_term>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"audit-logs",
+								"<id_or_search_term>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Audit Logs Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"user_id\" : \"\",\n    \"name\" : \"another thing\",\n    \"description\" : \"some other description\",\n    \"active\" : true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/audit-logs/<user_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"audit-logs",
+								"<user_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Audit Log Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"user_id\" : \"\",\n    \"name\" : \"Notes for Starting an App\",\n    \"description\" : \"How to start the frontend app...\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/audit-logs/<log_entry_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"audit-logs",
+								"<log_entry_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Audit Log Activate/Deactivate",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/audit-logs/status/<log_entry_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"audit-logs",
+								"status",
+								"<log_entry_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Audit Logs Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/audit-logs/delete/<log_entry_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"audit-logs",
+								"delete",
+								"<log_entry_id>"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tags",
+			"item": [
+				{
+					"name": "Tags Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/tags",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"tags"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Tag ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/tag/<tag_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"tag",
+								"<tag_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Org ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/tag/<org_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"tag",
+								"<org_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tag Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/tag/search?q=<search_term (tag_names)>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"tag",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "<search_term (tag_names)>"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tag Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"<tag_name>\",\n    \"color\": \"<tag_color>\",\n    \"org_id\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/tag",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"tag"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tag Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"<new name>\",\n    \"color\": \"<new color>\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/tag/<tag_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"tag",
+								"<tag_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tag Activate/Deactivate",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/tag/status/<tag_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"tag",
+								"status",
+								"<tag_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tag Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/tag/delete/<tag_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"tag",
+								"delete",
+								"<tag_id>"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TagObjXref",
+			"item": [
+				{
+					"name": "TagsObjXref Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"obj_id\" : \"<model primary key>\",\n    \"obj_type\" : \"<app_users, organizations>\",\n    \"tag_id\" : \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/tagobjs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"tagobjs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TagsObjXref Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/tagobjs/<obj_id>/<tag_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"tagobjs",
+								"<obj_id>",
+								"<tag_id>"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RecordTypes & CustomFields",
+			"item": [
+				{
+					"name": "Custom Fields",
+					"item": [
+						{
+							"name": "Get All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8089/custom-fields",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"custom-fields"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get By ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8089/custom-field/3c208c72-f2c8-4cd7-b799-66ce7b9f64c8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"custom-field",
+										"3c208c72-f2c8-4cd7-b799-66ce7b9f64c8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"<Ex: Favorite Color>\",\n    \"display_type\": \"<Ex: color_picker>\",\n    \"data_type\" : \"<Ex: String>\",\n    \"org_id\": \"0f9f8ce7-f1d3-43ac-b403-c64933425f76\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8089/custom-field",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"custom-field"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"jeff\",\n    \"display_type\": \"image\",\n    \"data_type\": \"text\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8089/custom-field/3c208c72-f2c8-4cd7-b799-66ce7b9f64c8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"custom-field",
+										"3c208c72-f2c8-4cd7-b799-66ce7b9f64c8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8089/custom-field/delete/3c208c72-f2c8-4cd7-b799-66ce7b9f64c8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"custom-field",
+										"delete",
+										"3c208c72-f2c8-4cd7-b799-66ce7b9f64c8"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Record Types",
+					"item": [
+						{
+							"name": "Get All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8089/record-types",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"record-types"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get By ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8089/record-type/62933215-87a5-4f31-8b6f-639805856d1b",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"record-type",
+										"62933215-87a5-4f31-8b6f-639805856d1b"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"<record type Ex: HR, Management, Employees>\",\n    \"object_type\": \"<Ex: AppUsers, Organizations\",\n    \"org_id\": \"0f9f8ce7-f1d3-43ac-b403-c64933425f76\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8089/record-type",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"record-type"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"<Ex: Employees, HR, Management>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8089/record-type/62933215-87a5-4f31-8b6f-639805856d1b",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"record-type",
+										"62933215-87a5-4f31-8b6f-639805856d1b"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8089/record-type/delete/62933215-87a5-4f31-8b6f-639805856d1b",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"record-type",
+										"delete",
+										"62933215-87a5-4f31-8b6f-639805856d1b"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Xref",
+					"item": [
+						{
+							"name": "Get All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8089/record-custom-xrefs",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"record-custom-xrefs"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Record Type By ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8089/record-custom-xref/record-type/96365597-9a40-4434-b543-ecc1788a28dc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"record-custom-xref",
+										"record-type",
+										"96365597-9a40-4434-b543-ecc1788a28dc"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Custom Field By ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8089/record-custom-xref/custom-field/382acb3c-ab06-4599-b2a3-af3a409d90ad",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"record-custom-xref",
+										"custom-field",
+										"382acb3c-ab06-4599-b2a3-af3a409d90ad"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Xref",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"record_type_id\" : \"96365597-9a40-4434-b543-ecc1788a28dc\",\n    \"custom_field_id\": \"382acb3c-ab06-4599-b2a3-af3a409d90ad\",\n    \"order\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8089/record-custom-xref",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"record-custom-xref"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8089/record-custom-xref/96365597-9a40-4434-b543-ecc1788a28dc/382acb3c-ab06-4599-b2a3-af3a409d90ad",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"record-custom-xref",
+										"96365597-9a40-4434-b543-ecc1788a28dc",
+										"382acb3c-ab06-4599-b2a3-af3a409d90ad"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Custom Field Options",
+					"item": [
+						{
+							"name": "Get All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8089/custom-field-options",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"custom-field-options"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get By ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8089/custom-field-option/<custom_field_option_id>",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"custom-field-option",
+										"<custom_field_option_id>"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add New",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"custom_field_id\": \"\",\n    \"name\": \"<Example for color picker Ex: Purple, Green>\",\n    \"option_value\": \"<value for option ColorPickerEx: #FF0000>\",\n    \"is_default\": \"<true or false>\",\n    \"org_id\": \"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8089/custom-field-option",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"custom-field-option"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"<ColorPickerEx: Red, Green, Blue>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8089/custom-field-option/<custom_field_option_id>",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"custom-field-option",
+										"<custom_field_option_id>"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Activity Status",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8089/custom-field-option/status/<custom_field_option_id>",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"custom-field-option",
+										"status",
+										"<custom_field_option_id>"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8089/custom-field-option/delete/<custom_field_option_id>",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"custom-field-option",
+										"delete",
+										"<custom_field_option_id>"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Custom Field Values",
+					"item": [
+						{
+							"name": "Get All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8089/custom-field-values",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"custom-field-values"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get By ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8089/custom-field-value/<custom_field_id>",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"custom-field-value",
+										"<custom_field_id>"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add New",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"custom_field_id\": \"\",\n    \"object_id\": \"<id for whichever object_type was picked Ex: app_users (obj type) object_id: user_id>\",\n    \"object_type\": \"<Ex: app_users, organizations>\",\n    \"string_value\": \"\",\n    \"int_value\": 0,\n    \"float_value\": 0,\n    \"uuid_value\": \"<Required, use any ID until controller fix>\",\n    \"org_id\": \"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8089/custom-field-value",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"custom-field-value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"string_value\": \"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8089/custom-field-value/<custom_field_id>",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"custom-field-value",
+										"<custom_field_id>"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8089/custom-field-value/delete/<custom_field_id>/<object_id>",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"custom-field-value",
+										"delete",
+										"<custom_field_id>",
+										"<object_id>"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Files",
+			"item": []
+		},
+		{
+			"name": "Roles",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/roles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/role/<role_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"role",
+								"<role_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"\",\n    \"org_id\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/role",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"role"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/role/<role_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"role",
+								"<role_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Activate/Deactivate",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/role/status/<role_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"role",
+								"status",
+								"<role_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/role/delete/<role_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"role",
+								"delete",
+								"<role_id>"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Permissions",
+			"item": [
+				{
+					"name": "Get All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/permissions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"permissions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/permission/<permission_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"permission",
+								"<permission_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/permissions/search?q=<search_query>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"permissions",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "<search_query>"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/permission",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"permission"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/permission/<permission_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"permission",
+								"<permission_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "activate",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/permission/status/<permission_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"permission",
+								"status",
+								"<permission_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/permission/delete/<permission_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"permission",
+								"delete",
+								"<permission_id>"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Logout",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/user/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Request Password Change",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"+1@devpipeline.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/user/pw_change_request",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"user",
+								"pw_change_request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot Password Change",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/user/forgot_password_change",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"user",
+								"forgot_password_change"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Avatar",
+			"item": [
+				{
+					"name": "Add Avatar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"avatar_type\" : \"\",\n    \"color\" : \"\",\n    \"background_color\" : \"\",\n    \"scale\" : \"\",\n    \"position_x\" : \"\",\n    \"position_y\" : \"\",\n    \"image_url\" : \"\",\n    \"icon_data\" : \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/avatar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"avatar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Avatar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"avatar_type\" : \"\",\n    \"color\" : \"\",\n    \"background_color\" : \"\",\n    \"scale\" : \"\",\n    \"position_x\" : \"\",\n    \"position_y\" : \"\",\n    \"image_url\" : \"\",\n    \"icon_data\" : \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/avatar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"avatar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Attachements",
+			"item": [
+				{
+					"name": "Get Attachment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/attachment/817feecf-56d9-40ce-91ef-63e17f7d5ea5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"attachment",
+								"817feecf-56d9-40ce-91ef-63e17f7d5ea5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Attachment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"attachment_type\": \"image\",\n    \"name\" : \"screenshot\",\n    \"file_name\" : \"screenshot.png\",\n    \"url\" : \"http://localhost:8089/files/screenshot.png\",\n    \"attached_by_id\" : \"339c524b-2507-4a15-acf2-423a3edfd916\",\n    \"task_id\" : \"c3f5bb98-900f-48c7-8a3d-c72979530ca1\",\n    \"project_id\" : \"00528183-f39f-420e-8339-09c7559d8db6\",\n    \"org_id\" : \"d3ec3faf-923d-421b-a72c-f59e9dec05e5\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/attachment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"attachment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Attachment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"new_screenshot\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/attachment/817feecf-56d9-40ce-91ef-63e17f7d5ea5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"attachment",
+								"817feecf-56d9-40ce-91ef-63e17f7d5ea5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Attachement",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/attachment/817feecf-56d9-40ce-91ef-63e17f7d5ea5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"attachment",
+								"817feecf-56d9-40ce-91ef-63e17f7d5ea5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Backlogs",
+			"item": [
+				{
+					"name": "Add Backlog",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"ye ole backlog\",\n    \"color\" : \"#222\",\n    \"project_id\" : \"250861d8-7477-45b3-98dc-f8fb6a9b173b\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/backlog",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"backlog"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Backlog",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"name\" : \"ye older backlog\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/backlog/a6f92657-1612-45ba-be78-057b4b75a82d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"backlog",
+								"a6f92657-1612-45ba-be78-057b4b75a82d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Backlog",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/backlog/a6f92657-1612-45ba-be78-057b4b75a82d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"backlog",
+								"a6f92657-1612-45ba-be78-057b4b75a82d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Backlogs",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/backlogs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"backlogs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tasks",
+			"item": [
+				{
+					"name": "Get All Tasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by user id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/tasks/user/c8415aa8-757c-4331-be49-7935494f8eea",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"tasks",
+								"user",
+								"c8415aa8-757c-4331-be49-7935494f8eea"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Task",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"FE: Third task\",\n    \"description\": \"A task for anotha one\",\n    \"org_id\": \"bd784505-cb8e-4232-9efe-b393cb36d3f2\",\n    \"project_id\": \"b3ac70ce-68bb-436e-b41d-cca94daf9b90\",\n    \"points_estimate\": 0.5,\n    \"created_by_id\": \"ceac5d8f-bccf-4a73-a3a8-25c0da852701\",\n    \"date_created\": \"10/10/2010\",\n    \"date_started\": \"10/10/2021\",\n    \"date_due\": \"10/10/2021\",\n    \"date_completed\": \"10/10/2022\",\n    \"date_last_updated\": \"10/10/2022\",\n    \"active\": true,\n    \"task_status_id\": \"d59de830-68db-4b86-b2e8-38728e00a259\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/task",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"task"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Task",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"assignee_id\": \"c8415aa8-757c-4331-be49-7935494f8eea\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/task/6d69ae8a-5c59-4d45-8521-3660a19d177a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"task",
+								"6d69ae8a-5c59-4d45-8521-3660a19d177a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Activate",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/task/status/6d69ae8a-5c59-4d45-8521-3660a19d177a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"task",
+								"status",
+								"6d69ae8a-5c59-4d45-8521-3660a19d177a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sprint Types",
+			"item": [
+				{
+					"name": "Sprint Types Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/sprint_types",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"sprint_types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Sprint Type ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/sprint_types/37fd25e3-df67-48cc-a024-5c52754305cc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"sprint_types",
+								"37fd25e3-df67-48cc-a024-5c52754305cc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sprint Type Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/sprint_types/search?q=su",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"sprint_types",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "su"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sprint Type Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"super\",\n    \"description\": \"the best kind of sprint\",\n    \"created_by\": \"af867543-453f-44a1-8033-136b9456665c\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/sprint_types",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"sprint_types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sprint Type Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"super purple\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/sprint_types/37fd25e3-df67-48cc-a024-5c52754305cc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"sprint_types",
+								"37fd25e3-df67-48cc-a024-5c52754305cc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sprint Types Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/sprint_types/delete/37fd25e3-df67-48cc-a024-5c52754305cc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"sprint_types",
+								"delete",
+								"37fd25e3-df67-48cc-a024-5c52754305cc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Log Entries",
+			"item": [
+				{
+					"name": "Log Entry Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"object_type\" : \"AppUsers\",\n    \"log_text\" : \"Log Entry\",\n    \"user_id\" : \"eb7e5937-f620-4300-99a3-9756f31370e5\",\n    \"object_id\": \"eb7e5937-f620-4300-99a3-9756f31370e5\",\n    \"date_created\" : \"2023-07-10T17:11:21.637671\",\n    \"org_id\" : \"ba360d3a-a165-4c1a-a6b5-1f1c72a431e0\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/log-entry",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"log-entry"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Log Entry Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"date_created\": \"2023-08-10T17:11:21.637671\"\n}\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/log-entry/84805fea-192e-4fcc-be88-b2a6816c9f3a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"log-entry",
+								"84805fea-192e-4fcc-be88-b2a6816c9f3a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Log Entry Get by Org ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/log-entry/organization",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"log-entry",
+								"organization"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Log Entry Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/log-entry/delete/84805fea-192e-4fcc-be88-b2a6816c9f3a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"log-entry",
+								"delete",
+								"84805fea-192e-4fcc-be88-b2a6816c9f3a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Log Entries Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/log-entries",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"log-entries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Log Entry Get by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/log-entry/84805fea-192e-4fcc-be88-b2a6816c9f3a",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"log-entry",
+								"84805fea-192e-4fcc-be88-b2a6816c9f3a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sprint Type Statuses",
+			"item": [
+				{
+					"name": "Sprint Type Statuses Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"sprint_type_id\" : \"c7133493-bd99-4d54-a801-051db4c54c9c\",\n    \"task_status_id\" : \"74208018-39bc-4003-8f38-9710b53a0cb6\",\n    \"order\" : 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sprint Type Status Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/status/delete/c7133493-bd99-4d54-a801-051db4c54c9c/74208018-39bc-4003-8f38-9710b53a0cb6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"status",
+								"delete",
+								"c7133493-bd99-4d54-a801-051db4c54c9c",
+								"74208018-39bc-4003-8f38-9710b53a0cb6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sprint Type Statuses Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"order\" : 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/status/c7133493-bd99-4d54-a801-051db4c54c9c/74208018-39bc-4003-8f38-9710b53a0cb6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"status",
+								"c7133493-bd99-4d54-a801-051db4c54c9c",
+								"74208018-39bc-4003-8f38-9710b53a0cb6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sprint Type Statuses Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sprints",
+			"item": [
+				{
+					"name": "Sprints Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/sprints",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"sprints"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Sprint ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/sprints/391e3ea6-2377-4445-aa24-a2f8dee74508",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"sprints",
+								"391e3ea6-2377-4445-aa24-a2f8dee74508"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Org ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/sprints/organization",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"sprints",
+								"organization"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sprint Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/sprints/search?q=se",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"sprints",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "se"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sprint Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"sprint_type_id\": \"bda0e38e-c904-48fd-a903-5dc619c96082\",\n    \"name\": \"Second Ever Sprint\",\n    \"description\": \"testing out adding sprints num 2\",\n    \"date_start\": null,\n    \"date_end\": null,\n    \"velocity\": 2,\n    \"created_by_id\": \"955d2e45-667f-4140-952e-1dfb03f92392\",\n    \"velocity_actual\": 2,\n    \"color\": \"blue\",\n    \"org_id\": \"db1d1b7d-3992-46ff-8a52-86fd708302f4\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/sprints",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"sprints"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sprint Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Updated Second Ever Sprint\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/sprints/391e3ea6-2377-4445-aa24-a2f8dee74508",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"sprints",
+								"391e3ea6-2377-4445-aa24-a2f8dee74508"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sprint Activate/Deactivate",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/sprints/status/391e3ea6-2377-4445-aa24-a2f8dee74508",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"sprints",
+								"status",
+								"391e3ea6-2377-4445-aa24-a2f8dee74508"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sprints Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/sprints/delete/391e3ea6-2377-4445-aa24-a2f8dee74508",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"sprints",
+								"delete",
+								"391e3ea6-2377-4445-aa24-a2f8dee74508"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Task Statuses",
+			"item": [
+				{
+					"name": "Get All Task Statuses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/task-statuses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"task-statuses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Org ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/task-status/bd784505-cb8e-4232-9efe-b393cb36d3f2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"task-status",
+								"bd784505-cb8e-4232-9efe-b393cb36d3f2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Task Status",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"bob\",\n    \"color\": \"red\",\n    \"org_id\": \"ef59b142-10ee-4251-877c-bbbb881fdaf1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/task-status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"task-status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Task Status",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"batman\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/task-status/d48788d9-3f0b-485c-b9d5-142fddf59d01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"task-status",
+								"d48788d9-3f0b-485c-b9d5-142fddf59d01"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Activate/Deactivate Task Status",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/task-status/status/d48788d9-3f0b-485c-b9d5-142fddf59d01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"task-status",
+								"status",
+								"d48788d9-3f0b-485c-b9d5-142fddf59d01"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Task Status",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/task-status/delete/d48788d9-3f0b-485c-b9d5-142fddf59d01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"task-status",
+								"delete",
+								"d48788d9-3f0b-485c-b9d5-142fddf59d01"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Table Import",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "csv_file",
+							"type": "file",
+							"src": "/Users/tim/Downloads/tasks (1).csv"
+						},
+						{
+							"key": "import_type",
+							"value": "tasks",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8089/import",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"import"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "X - Org & User Search (needs looking into, remove comment when fixed)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8089/search?q=<search_query>",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "<search_query>"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"pm.collectionVariables.set(\"auth_token\",jsonData.auth_info.auth_token);",
+							"console.log(pm.variables.get(\"auth_token\"));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"taskwize-admin@devpipeline.com\",\n    \"password\":\"123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8089/user/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"user",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "{{auth_token}}",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "auth_token",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "auth_token",
+			"value": ""
+		}
+	]
+}

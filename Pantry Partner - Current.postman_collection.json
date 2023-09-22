@@ -1,0 +1,1572 @@
+{
+	"info": {
+		"_postman_id": "b981e134-7365-4612-afd0-5c265f28b7e1",
+		"name": "Pantry Partner - Current",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25275558"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"display_name\": \"\",\n    \"first_name\": \"\",\n    \"last_name\": \"\",\n    \"email\": \"\",\n    \"phone\": \"\",\n    \"password\": \"\",\n    \"role\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/user/<user_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"user",
+								"<user_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User by Org ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/users/organization/<org_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"users",
+								"organization",
+								"<org_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User from Auth",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/user/me",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"user",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \n    \"display_name\": \"\",\n    \"email\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/user/<user_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"user",
+								"<user_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8089/user/delete/<user_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"user",
+								"delete",
+								"<user_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Activity",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/user/status/<user_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"user",
+								"status",
+								"<user_id>"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Measurements",
+			"item": [
+				{
+					"name": "Unit Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"\",\n    \"metric\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/measurement-unit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"measurement-unit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Unit by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/measurement-unit/<unit_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"measurement-unit",
+								"<unit_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Units",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/measurement-units",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"measurement-units"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unit Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/measurement-unit/<unit_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"measurement-unit",
+								"<unit_id>"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ingredients",
+			"item": [
+				{
+					"name": "Ingredients Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"grapes\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/ingredient",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"ingredient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Ingredient by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/ingredient/<ingredient_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"ingredient",
+								"<ingredient_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Ingredients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/ingredients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"ingredients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ingredient Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/ingredient/<ingredient_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"ingredient",
+								"<ingredient_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ingredient Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8089/ingredient/delete/<ingredient_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"ingredient",
+								"delete",
+								"<ingredient_id>"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Shopping List",
+			"item": [
+				{
+					"name": "Shopping List Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"owner_id\": \"\",\n    \"title\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/shopping-list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"shopping-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Shopping Lists",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/shopping-lists",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"shopping-lists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Shopping List by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/shopping-list/<shopping_list_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"shopping-list",
+								"<shopping_list_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Shopping List by Owner ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/shopping-lists/<user_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"shopping-lists",
+								"<user_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Shopping List Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"owner_id\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/shopping-list/<shopping_list_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"shopping-list",
+								"<shopping_list_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Shopping List Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/shopping-list/delete/c3928f2c-4daf-4f0c-997c-6070758606cc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"shopping-list",
+								"delete",
+								"c3928f2c-4daf-4f0c-997c-6070758606cc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Shopping List Ingredients",
+			"item": [
+				{
+					"name": "Ingredient Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ingredients_arr\": [\"e6e477eb-e101-4202-b746-796f333b1698\", \"ada6a03a-470d-49f7-905c-d66b6eec6f47\", \"c456cf82-e1ab-4355-b811-c4f8de02938b\"],\n    \"shopping_list_id\": \"d6944ed1-813c-488e-8115-3191a4d7e76e\",\n    \"checked\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/shopping-list-ingredient",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"shopping-list-ingredient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Ingredients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/shopping-list-ingredients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"shopping-list-ingredients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Ingredients by List ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/shopping-list-ingredients/c3928f2c-4daf-4f0c-997c-6070758606cc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"shopping-list-ingredients",
+								"c3928f2c-4daf-4f0c-997c-6070758606cc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Ingredients by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/shopping-list-ingredient/<shopping_list_ingredient_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"shopping-list-ingredient",
+								"<shopping_list_ingredient_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ingredient Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"quantity\": 16\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/shopping-list-ingredient/<shopping_list_ingredient_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"shopping-list-ingredient",
+								"<shopping_list_ingredient_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ingredient Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/shopping-list-ingredient/delete/<shopping_list_ingredient_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"shopping-list-ingredient",
+								"delete",
+								"<shopping_list_ingredient_id>"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Recipes",
+			"item": [
+				{
+					"name": "Recipe Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "attributor",
+									"value": "Jake",
+									"type": "text"
+								},
+								{
+									"key": "cook_time_minute",
+									"value": "105",
+									"type": "text"
+								},
+								{
+									"key": "prep_time_minute",
+									"value": "60",
+									"type": "text"
+								},
+								{
+									"key": "instructions",
+									"value": "Preheat the oven to 375 F. || Cut chicken breasts in half lenghtwise || In one bowl beat 4 eggs together || In another bowl put 3 cups of flour and seasonings of choice || In a third bowl add 4 cups of bread crumbs and the same seasonings of choice || Bread each peice of chicken in flour, egg, then bread crumbs and set each peice aside || After breadding each peice of chicken heat a pot of oil over medium high heat || When the oil is hot fry 2-3 peices of chicken at a time || When all the chicken is fried, arrange the chicken on a baking tray || Top each peice of chicken with marinara sauce and mozzerella cheese || Bake for 45 minutes at 375 F",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Chicken Parm",
+									"type": "text"
+								},
+								{
+									"key": "tag_id_arr",
+									"value": "46c2eed2-b7fb-4ad9-be45-cb2c9b91769e,0daee341-2389-4c1a-be96-60411f27392c",
+									"type": "text"
+								},
+								{
+									"key": "tag_id_arr",
+									"value": "9a9cc229-1f83-4dd3-b6cf-3e18edb9f4db",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8089/recipe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"recipe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Recipes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/recipes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"recipes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Recipe by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/recipe/da0a3d64-2144-48ae-8134-4a012fcf854d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"recipe",
+								"da0a3d64-2144-48ae-8134-4a012fcf854d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Recipes by Creator ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/recipes/me",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"recipes",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reciep Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "tag_id_arr",
+									"value": "c4caa6ee-6d75-4032-a144-fa3ea9996ac4",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "pizza",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8089/recipe/da0a3d64-2144-48ae-8134-4a012fcf854d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"recipe",
+								"da0a3d64-2144-48ae-8134-4a012fcf854d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recipe Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/recipe/delete/<recipe_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"recipe",
+								"delete",
+								"<recipe_id>"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Recipe Images",
+			"item": [
+				{
+					"name": "Image Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/jake/Desktop/download-1.jpg"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/jake/Desktop/download-2.jpg"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/jake/Desktop/download-1.jpg",
+									"disabled": true
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/jake/Desktop/download-2.jpg",
+									"disabled": true
+								},
+								{
+									"key": "recipe_id",
+									"value": "d3ba2e37-e4c6-42f3-8d3d-70f3fce2fd39",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8089/recipe-image",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"recipe-image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Image by recipe ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/recipe-images/e1e410d7-91bb-4178-b339-517c890a73aa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"recipe-images",
+								"e1e410d7-91bb-4178-b339-517c890a73aa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Image by image id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/recipe-image/b904a9d2-c6eb-48db-8dd6-0db9dde08122",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"recipe-image",
+								"b904a9d2-c6eb-48db-8dd6-0db9dde08122"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Image Delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/recipe-image/delete/76f88105-dc40-49cc-ac91-9679b28e101e",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"recipe-image",
+								"delete",
+								"76f88105-dc40-49cc-ac91-9679b28e101e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Image is_main",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/recipe-image/status/b4cd8759-996a-467a-891b-7e5d6f11f1f2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"recipe-image",
+								"status",
+								"b4cd8759-996a-467a-891b-7e5d6f11f1f2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Image Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/recipe-images",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"recipe-images"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "image update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/jake/Desktop/download-3.jpg"
+								},
+								{
+									"key": "is_main",
+									"value": "false",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8089/recipe-image/b4cd8759-996a-467a-891b-7e5d6f11f1f2",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"recipe-image",
+								"b4cd8759-996a-467a-891b-7e5d6f11f1f2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Recipe Ingredients",
+			"item": [
+				{
+					"name": "Ingredient Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"recipe_id\": \"c0cdb12b-f36b-451a-8e42-7ad5b77c3434\",\n    \"ingredient_id\": \"09240655-6d71-4f98-ad91-7420c444b42b\",\n    \"measure_type\": \"dd9cb8b6-4e70-4dcf-8cdc-3e862845db08\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/recipe-ingredient",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"recipe-ingredient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Ingredients by Recipe ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/recipe-ingredients/de896682-89a7-46bb-8b72-cfa841042f2c",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"recipe-ingredients",
+								"de896682-89a7-46bb-8b72-cfa841042f2c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ingredient Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"quantity\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/recipe-ingredient/<recipe_ingredient_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"recipe-ingredient",
+								"<recipe_ingredient_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ingredient Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/recipe-ingredient/delete/<recipe_ingredient_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"recipe-ingredient",
+								"delete",
+								"<recipe_ingredient_id>"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tags",
+			"item": [
+				{
+					"name": "Tag Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"foodss\",\n    \"color\": \"bluess\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/tag",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"tag"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tag by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/tag/<tag_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"tag",
+								"<tag_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Tags",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/tags",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"tags"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tag Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"color\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/tag/<tag_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"tag",
+								"<tag_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tag Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/tag/delete/<tag_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"tag",
+								"delete",
+								"<tag_id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tag Active Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/tag/status/<tag_id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"tag",
+								"status",
+								"<tag_id>"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Search",
+			"item": [
+				{
+					"name": "Recipe Get by Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/recipes/search?q=chi",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"recipes",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "chi"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tag Get by Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/tags/search?q=di",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"tags",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "di"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Get by Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/users/search?q=th",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"users",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "th"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recipe Get by Ingredient Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/recipe-ingredients/search?q=chicken",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"recipe-ingredients",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "chicken"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ingredient Get by Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/ingredients/search?q=ch",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"ingredients",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "ch"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"pm.collectionVariables.set(\"auth_token\",jsonData.auth_token);",
+							"console.log(pm.variables.get(\"auth_token\"));",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"pantry-partner-admin@devpipeline.com\",\n    \"password\": \"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8089/user/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"user",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8089/recipes?page=2&per_page=75",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8089/recipes?page=2&per_page=75",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"recipes"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						},
+						{
+							"key": "per_page",
+							"value": "75"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "628d3027-72c2-4c8f-8c85-24cf5a0cb440",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "auth_token",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "auth_token",
+			"value": ""
+		}
+	]
+}

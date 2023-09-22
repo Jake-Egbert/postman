@@ -1,0 +1,671 @@
+{
+	"info": {
+		"_postman_id": "ed42229a-be52-4019-b858-4c4be240c8ca",
+		"name": "Certitrack Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25275558"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Add User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Auth-Token",
+								"value": "751f29ba-bbdd-4301-858a-1ddb82773dd9",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\":\"Tom\",\n    \"last_name\":\"Rogers\",\n    \"email\":\"to@rogers.com\",\n    \"password\": \"1234\",\n    \"role\": \"super-admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8089/user",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Auth-Token",
+								"value": "751f29ba-bbdd-4301-858a-1ddb82773dd9",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Jill\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8089/user/86320cfc-e13e-44b3-a200-865ca5559848",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"user",
+								"86320cfc-e13e-44b3-a200-865ca5559848"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/user/d793daef-1411-4bec-9b9f-64644d61878d",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"user",
+								"d793daef-1411-4bec-9b9f-64644d61878d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User by Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/users/st",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"users",
+								"st"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User by Auth",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/user/me",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"user",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8089/user/delete/20801f31-868b-405d-bd2a-ddf545e08ec3",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"user",
+								"delete",
+								"20801f31-868b-405d-bd2a-ddf545e08ec3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deactivate User",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8089/user/deactivate/283deba3-6ae7-4a7d-8839-284289bcde59",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"user",
+								"deactivate",
+								"283deba3-6ae7-4a7d-8839-284289bcde59"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Activate User",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8089/user/activate/d793daef-1411-4bec-9b9f-64644d61878d",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"user",
+								"activate",
+								"d793daef-1411-4bec-9b9f-64644d61878d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Certificates",
+			"item": [
+				{
+					"name": "Add Certification",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Auth-Token",
+								"value": "751f29ba-bbdd-4301-858a-1ddb82773dd9",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \n    \"first_name\": \"Brett\",\n    \"last_name\" : \"Wheeler\",\n    \"completion_date\": \"2023-04-20\",\n    \"course_id\":\"13ed00eb-273a-4e5e-89c5-c14f08d67bef\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/certification",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"certification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Certification",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Auth-Token",
+								"value": "751f29ba-bbdd-4301-858a-1ddb82773dd9",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"completion_date\": \"2023-04-10\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8089/certification/e37b2973-9d0f-42f5-83e9-ee548e5ef2d8",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"certification",
+								"e37b2973-9d0f-42f5-83e9-ee548e5ef2d8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Certifications",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/certifications",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"certifications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Certification by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/certification/59f85e4a-7470-407b-8ce0-27edd10bf806",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"certification",
+								"59f85e4a-7470-407b-8ce0-27edd10bf806"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Certification by Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/certifications/",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"certifications",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Certificate Activity",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8089/certification/activity/34b8fdeb-d5af-4376-933f-300fca0938b3",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"certification",
+								"activity",
+								"34b8fdeb-d5af-4376-933f-300fca0938b3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Certification",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/certification/delete/acb72591-781f-42d1-8b0c-29af5e8ea981",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"certification",
+								"delete",
+								"acb72591-781f-42d1-8b0c-29af5e8ea981"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Courses",
+			"item": [
+				{
+					"name": "Add Course",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Auth-Token",
+								"value": "751f29ba-bbdd-4301-858a-1ddb82773dd9",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"course_name\": \"Back-End web Development\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8089/course",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"course"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Course",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Auth-Token",
+								"value": "751f29ba-bbdd-4301-858a-1ddb82773dd9",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"course_name\":\"Coding Foundations\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8089/course/cf9d5343-2377-48e6-90cf-4d6807adf803",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"course",
+								"cf9d5343-2377-48e6-90cf-4d6807adf803"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Course by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/course/cf9d5343-2377-48e6-90cf-4d6807adf803",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"course",
+								"cf9d5343-2377-48e6-90cf-4d6807adf803"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Course by Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/courses/ben",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"courses",
+								"ben"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Course Activity",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8089/course/deactivate/cf9d5343-2377-48e6-90cf-4d6807adf803",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"course",
+								"deactivate",
+								"cf9d5343-2377-48e6-90cf-4d6807adf803"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Course",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/course/delete/ac2ba877-7c6d-4051-862f-3595f583943b",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"course",
+								"delete",
+								"ac2ba877-7c6d-4051-862f-3595f583943b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authenticate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"certitrack-admin@devpipeline.com\",\n    \"password\":\"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8089/user/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"user",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "fc1a5fe6-95af-4332-bae6-b8b3938c8bf9",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "Auth-Token",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
